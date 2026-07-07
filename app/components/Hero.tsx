@@ -2,19 +2,22 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section
-      className="relative flex min-h-screen items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: "url('/images/hero.JPG')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
+
+      {/* Background Image */}
+      <Image
+        src="/images/hero.JPG"
+        alt="Phoenix Detailing"
+        fill
+        priority
+        className="object-cover object-center -z-20"
+      />
+
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-black/50 -z-10"></div>
 
       {/* Blue Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.20),transparent_60%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.20),transparent_60%)] -z-10"></div>
 
       {/* Hero Content */}
       <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center">
@@ -50,8 +53,6 @@ export default function Hero() {
 
         <div className="mt-12 flex flex-wrap justify-center gap-6">
 
-          {/* Book Now */}
-
           <a
             href="https://myservicelink.app/phoenixdetailingli"
             target="_blank"
@@ -60,8 +61,6 @@ export default function Hero() {
           >
             Book Now
           </a>
-
-          {/* Call Now */}
 
           <a
             href="tel:+19342008660"
@@ -74,8 +73,7 @@ export default function Hero() {
 
       </div>
 
-      {/* Fade Into Next Section */}
-
+      {/* Bottom Fade */}
       <div className="absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-black to-transparent"></div>
 
     </section>
