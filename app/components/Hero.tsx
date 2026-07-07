@@ -11,7 +11,7 @@ export default function Hero() {
       }}
     >
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/65"></div>
+      <div className="absolute inset-0 bg-black/80"></div>
 
       {/* Blue Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.20),transparent_60%)]"></div>
