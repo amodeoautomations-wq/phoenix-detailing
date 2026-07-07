@@ -5,7 +5,7 @@ export default function Hero() {
     <section
       className="relative flex min-h-screen items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: "url('/images/hero.jpg')",
+        backgroundImage: "url('/images/hero.JPG')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
