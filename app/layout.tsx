@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Manrope } from "next/font/google";
 import "./globals.css";
+import LocalBusinessSchema from "./components/LocalBusinessSchema";
 
 const bebas = Bebas_Neue({
   weight: "400",
@@ -84,6 +85,7 @@ export default function RootLayout({
       className={`${bebas.variable} ${manrope.variable}`}
     >
       <body className="bg-black font-[var(--font-manrope)] text-white">
+        <LocalBusinessSchema />
         {children}
       </body>
     </html>
