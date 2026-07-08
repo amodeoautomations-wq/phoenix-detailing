@@ -4,25 +4,21 @@ export default function WhyChoose() {
       title: "Mobile Convenience",
       description:
         "We come directly to your home or workplace, bringing professional detailing wherever you are.",
-      icon: "🚗",
     },
     {
       title: "Premium Protection",
       description:
         "Ceramic coatings, paint protection film, and premium products that keep your vehicle looking flawless.",
-      icon: "🛡️",
     },
     {
       title: "Attention to Detail",
       description:
         "Every inch of your vehicle receives meticulous care for a showroom-quality finish.",
-      icon: "✨",
     },
     {
       title: "Customer Satisfaction",
       description:
         "Our goal is simple: exceed expectations and make every customer proud to drive their vehicle.",
-      icon: "⭐",
     },
   ];
 
@@ -54,10 +50,6 @@ export default function WhyChoose() {
               key={feature.title}
               className="group rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md transition duration-300 hover:-translate-y-3 hover:border-blue-500 hover:bg-blue-500/10"
             >
-              <div className="mb-6 text-5xl">
-                {feature.icon}
-              </div>
-
               <h3 className="mb-4 text-2xl font-bold">
                 {feature.title}
               </h3>
