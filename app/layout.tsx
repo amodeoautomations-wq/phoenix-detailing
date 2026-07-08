@@ -14,8 +14,32 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Phoenix Detailing",
-  description: "Premium Mobile Auto Detailing | Long Island & Suffolk County",
+  metadataBase: new URL("https://phoenix-detailing.vercel.app"),
+
+  title: {
+    default: "Phoenix Detailing | Premium Mobile Auto Detailing on Long Island",
+    template: "%s | Phoenix Detailing",
+  },
+
+  description:
+    "Professional mobile auto detailing serving Long Island and Suffolk County. Ceramic coatings, paint correction, paint protection film, window tint, interior and exterior detailing.",
+
+  keywords: [
+    "Auto Detailing Long Island",
+    "Mobile Detailing Suffolk County",
+    "Ceramic Coating Long Island",
+    "Paint Correction",
+    "Window Tint",
+    "Paint Protection Film",
+    "Phoenix Detailing",
+    "Car Detailing",
+  ],
+
+  authors: [{ name: "Phoenix Detailing" }],
+
+  creator: "Phoenix Detailing",
+
+  publisher: "Phoenix Detailing",
 
   openGraph: {
     title: "Phoenix Detailing",
@@ -42,6 +66,11 @@ export const metadata: Metadata = {
       "Premium Mobile Auto Detailing serving Long Island and Suffolk County.",
     images: ["/images/og-image.png"],
   },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -54,7 +83,7 @@ export default function RootLayout({
       lang="en"
       className={`${bebas.variable} ${manrope.variable}`}
     >
-      <body className="bg-black text-white font-[var(--font-manrope)]">
+      <body className="bg-black font-[var(--font-manrope)] text-white">
         {children}
       </body>
     </html>
