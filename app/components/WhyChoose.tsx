@@ -27,6 +27,7 @@ export default function WhyChoose() {
       <div className="mx-auto max-w-7xl">
 
         <div className="mb-16 text-center">
+
           <p className="mb-4 uppercase tracking-[0.4em] text-blue-400">
             Why Choose Phoenix
           </p>
@@ -41,6 +42,7 @@ export default function WhyChoose() {
             We combine premium products, professional techniques, and a passion
             for perfection to give every vehicle the care it deserves.
           </p>
+
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -50,17 +52,26 @@ export default function WhyChoose() {
               key={feature.title}
               className="group rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md transition duration-300 hover:-translate-y-3 hover:border-blue-500 hover:bg-blue-500/10"
             >
-              <h3 className="mb-4 text-2xl font-bold">
+
+              {/* Blue Accent */}
+
+              <div className="mb-6 flex justify-center">
+                <div className="h-3 w-3 rounded-full bg-blue-500 shadow-[0_0_18px_rgba(59,130,246,.9)]"></div>
+              </div>
+
+              <h3 className="mb-4 text-center text-2xl font-bold">
                 {feature.title}
               </h3>
 
-              <p className="leading-7 text-gray-400">
+              <p className="text-center leading-7 text-gray-400">
                 {feature.description}
               </p>
+
             </div>
           ))}
 
         </div>
+
       </div>
     </section>
   );
